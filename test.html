@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Train timing app</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to MyTrainApp</h1>
+    <table>
+        <tr>
+            <th>slNo.</th>
+			<th>Date</th>
+            <th>TrainName</th>
+			<th>DepartureFrom</th>
+			<th>Departuretime</th>
+			<th>ArrivingAt</th>
+            <th>Arrivaltime</th>
+        </tr>
+        
+		{% for i in objects %}
+		
+		<tr>
+		
+            <td>{{i.slNo}}</td>
+			<td>{{i.Date}}</td>
+			<td>{{i.TrainName}}</td>
+			<td>{{i.DepartureFrom}}</td>
+			<td>{{i.Departuretime}}</td>
+			<td>{{i.ArrivingAt}}</td>
+			<td>{{i.Arrivaltime}}</td>
+			
+            
+        </tr>
+		{% endfor %}
+        
+    </table>
+</body>
+</html>
